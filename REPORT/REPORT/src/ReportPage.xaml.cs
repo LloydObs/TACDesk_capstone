@@ -78,26 +78,9 @@ namespace REPORT
         }
         private void emergencyCall()
         {
-            /*
-
-            string accountSid = "ACcd8ab8b4a733701e76fee5cb427b5066";
-            string authToken = "e90d2b5b7e971db20fb454f8c5df44aa";
-
-            TwilioClient.Init(accountSid, authToken);
-
-            var call = CallResource.Create(
-                url: new Uri("http://demo.twilio.com/docs/voice.xml"),
-                to: new Twilio.Types.PhoneNumber("+639294423749"),
-                from: new Twilio.Types.PhoneNumber("+639390373523")
-            );
-
-            Console.WriteLine(call.Sid);
-            */
-            //need pa mag verify ng numbers para makapagtest pero for sure working naman
-            
             try
             {
-                PhoneDialer.Open("09294423749");
+                PhoneDialer.Open("Phone Number");
             }
             catch (FeatureNotSupportedException ex)
             {
