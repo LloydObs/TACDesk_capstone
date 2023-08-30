@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:effects1="clr-namespace:REPORT.Effects"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="REPORT.History">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout>
+                <Frame HeightRequest="200" BackgroundColor="#00604f">
+                    <StackLayout Margin="0,-10,0,0">
+                        <ImageButton Source="back" BackgroundColor="Transparent" HeightRequest="50" HorizontalOptions="Start" 
+                                 Margin="5,30,0,0" Clicked="Button_Back">
+                        </ImageButton>
+
+                        <StackLayout BackgroundColor="transparent" HorizontalOptions="Center" Orientation="Horizontal"  
+                                 WidthRequest="370" HeightRequest="120" Margin="0,10">
+                            <Label Text="Your Submission History" FontSize="30" TextColor="White" FontAttributes="Bold" HorizontalOptions="Start" Margin="15,0,0,-10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <ContentView x:Name="loadingPopup" Padding="10,0" IsVisible="False">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" HeightRequest="150" WidthRequest="200">
+                            <ActivityIndicator x:Name="loading" Margin="0,50,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" IsRunning="True" WidthRequest="30" HeightRequest="30"/>
+
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+
+                <ListView x:Name="ReportView" ItemsSource="{Binding Reports}" HasUnevenRows="True" ItemTapped="ReportView_ItemTapped" SeparatorVisibility="None" VerticalScrollBarVisibility="Never" IsPullToRefreshEnabled="True"  >
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame HorizontalOptions="Center" WidthRequest="300" VerticalOptions="Start" HeightRequest="150" Margin="0,5,0,0">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout HeightRequest="120" WidthRequest="140" VerticalOptions="Start">
+                                                <Image Source="{Binding Image, FallbackValue='https://upload.wikimedia.org/wikipedia/commons/2/20/Point_d_interrogation.jpg' ,TargetNullValue='https://upload.wikimedia.org/wikipedia/commons/2/20/Point_d_interrogation.jpg'}" HeightRequest="150" WidthRequest="120"/>
+                                            </StackLayout>
+
+                                            <StackLayout HeightRequest="120">
+                                                <Label x:Name="showReportType" Text="{Binding reportType}" FontSize="18" FontAttributes="Bold" TextColor="Black" Margin="5,0,0,0"/>
+                                                <Label Text= "{Binding reportID, StringFormat='Report ID: {0:F0}'}" FontSize="14" TextColor="Black" Margin="5,0,0,0"/>
+                                                <Label Text="{Binding userID, StringFormat='User ID: {0:F0}'}" FontSize="14" TextColor="Black" Margin="5,0,0,0"/>
+                                                <Label Text="{Binding IsApproved, StringFormat='Report Status: {0:F0}'}" FontSize="12" TextColor="Black" Margin="5,0,0,0"/> 
+
+                                                <Label Text="SHOW MORE" HorizontalOptions="Center" WidthRequest="120" HeightRequest="40" FontSize="16" BackgroundColor="Transparent" 
+                                                TextTransform="None" TextColor="#00604f" FontAttributes="Bold" Margin="0,10,0,0"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

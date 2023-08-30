@@ -1,0 +1,84 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="REPORT.Signin">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout>
+            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="200" BackgroundColor="#00604f" Padding="0" Margin="0,0,0,0" BorderColor="Transparent">
+                    <StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Frame BackgroundColor="White" HeightRequest="400" HasShadow="True" Padding="0" Margin="0,-25,0,0" 
+                   BorderColor="Transparent" CornerRadius="25">
+                    <StackLayout>
+
+                        <StackLayout Margin="0,30,0,0" HorizontalOptions="Start">
+                            <Label Text="SIGN IN" TextColor="#0eb482" FontSize="30" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="Enter your registered account." TextColor="#3d3935" FontSize="16" Margin="31,-5,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,20" HorizontalOptions="Center">
+
+                            <StackLayout Orientation="Horizontal" Margin="17,10,0,-15">
+                                <Label Text="Phone Number" FontSize="18" TextColor="#3d3935" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <Frame BackgroundColor="Transparent" Margin="5,0,0,-5" Padding="0" HeightRequest="40" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="phoneNumberBox" Keyboard="Numeric" MaxLength="11" TextColor="#3d3935" FontSize="18" HorizontalOptions="FillAndExpand" Margin="8,0,20,-5"  ReturnType="Next"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <StackLayout Orientation="Horizontal" Margin="17,10,0,-5">
+                                <Label Text="Password" TextColor="#3d3935" FontSize="18" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <Frame BackgroundColor="Transparent" Margin="5,0,0,-5" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="passwordBox"  IsPassword="True" TextColor="#3d3935" FontSize="18" HeightRequest="40" HorizontalOptions="FillAndExpand" Margin="8,-5,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Button Text="Sign in" HorizontalOptions="Center" FontSize="16" FontAttributes="Bold" HeightRequest="40" WidthRequest="310" 
+                                BackgroundColor="#0eb482" TextColor="White" CornerRadius="10" Margin="15" Clicked="Button_Login"/>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="-10,-10,0,50">
+                                <Label Text="Don't have an account?" TextColor="#3d3935" FontSize="16"/>
+                                <Button Text="Register" HorizontalOptions="Center" BackgroundColor="Transparent" TextTransform="None" FontSize="16" 
+                                    TextColor="#0eb482" Margin="-15,-15" Clicked="Button_Register"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Frame HeightRequest="300" BackgroundColor="Transparent" Padding="-20" Margin="0,-50" BorderColor="Transparent">
+                <StackLayout>
+                    <Image Source="BG" HeightRequest="200" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,25,0,0"/>
+                </StackLayout>
+            </Frame>
+
+
+
+        </StackLayout>
+    </Grid>
+    
+
+</ContentPage>

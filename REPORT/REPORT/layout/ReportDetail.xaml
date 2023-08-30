@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="REPORT.ReportDetail"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout BackgroundColor="White">
+
+        <StackLayout BackgroundColor="White" HeightRequest="300">
+            <Image x:Name="reportImage"  HeightRequest="300" WidthRequest="400" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand" Margin="10,10,10,10"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label  x:Name="reportType" TextColor="Black" FontSize="26" FontAttributes="Bold" Margin="20,5,0,0"/>
+            <Label TextColor="Black" FontSize="22" FontAttributes="Bold" Margin="20,-10,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                         <Span  x:Name="specificReport"/>
+                         <Span  x:Name="othersLabel"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+           
+
+
+
+            <Label x:Name="reportID"  Text="Report ID: " TextColor="Black" FontSize="18" Margin="20,-5,0,0"/>
+            <Label x:Name="userID"  Text="Submitted by: " TextColor="Black" FontSize="18" Margin="20,-5,0,0"/>
+
+            <StackLayout>
+                <Image Source="date" HeightRequest="30" HorizontalOptions="Start" Margin="20,10,0,0"/>
+                <Label Text="Date Submitted" TextColor="Black" FontSize="20" Margin="70,-35,0,0"/>
+                <Label x:Name="dateSubmitted" TextColor="Black" FontSize="16" Margin="70,-5,0,0"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Image Source="status" HeightRequest="33" HorizontalOptions="Start" Margin="24,10,0,0"/>
+                <Label Text="Status" TextColor="Black" FontSize="20" Margin="70,-35,0,0"/>
+                <Label x:Name="reportStatus" TextColor="Black" FontSize="16" Margin="70,-5,0,0"/>
+            </StackLayout>
+
+            <Button Text="Back to Home" HorizontalOptions="Center" WidthRequest="300" HeightRequest="42" FontSize="18" CornerRadius="20" BackgroundColor="#00604f" 
+                    TextTransform="None" TextColor="White" Margin="0,20,0,0" Clicked="Button_Back"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

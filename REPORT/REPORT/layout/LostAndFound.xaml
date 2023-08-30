@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:reportit="clr-namespace:REPORT" xmlns:effects1="clr-namespace:ReportIT.effects"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="REPORT.LostAndFound">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+
+                <Frame HeightRequest="200" BackgroundColor="#00604f">
+                    <StackLayout Margin="0,-10,0,0">
+                        <ImageButton Source="back" BackgroundColor="Transparent" HeightRequest="50" HorizontalOptions="Start" Clicked="Button_Back"
+                                 Margin="5,30,0,0">
+                        </ImageButton>
+
+                        <StackLayout BackgroundColor="transparent" HorizontalOptions="Center" Orientation="Horizontal"  
+                                 WidthRequest="370" HeightRequest="120" Margin="0,10">
+                            <Label Text="Lost and Found " TextColor="White" FontSize="30" FontAttributes="Bold" Margin="10,0,0,-10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="25" Margin="0,-50,0,0">
+                    <StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="10, -5" >
+                            <Label Text="I have:" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="0,10,0,-10"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="5,-5,0,-35">
+                            <RadioButton x:Name="lostItem"  Content="Lost an item" FontSize="18" Value="Lost an Item" CheckedChanged="LostItem_CheckChanged"/>
+                            <RadioButton  x:Name="foundItem"  Content="Found an item" FontSize="18" Margin="20" Value="Found an Item" CheckedChanged="FoundItem_CheckChanged"
+                     IsChecked="True"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Item Category" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,20,0,0"/>
+                            <Label Text="Item Name" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="45,20,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="-5,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <reportit:BorderlessPicker x:Name="Category"
+                            Title="Category"
+                            VerticalOptions="Center" Margin="10,0,0,0" FontSize="16">
+                                    <Picker.Items>
+                                    </Picker.Items>
+                                </reportit:BorderlessPicker>
+                            </Frame>
+
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="10,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <Entry x:Name="ItemName" FontSize="16" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40"  Margin="5,0,0,0" Placeholder="Item Name" >
+                                </Entry>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label  Text="Location Last Seen" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,0,0,0"/>
+                        <Frame WidthRequest="315" HeightRequest="40" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                            <Entry x:Name="Venue" FontSize="16" Margin="5,0,0,0" Placeholder="Location Last Seen" WidthRequest="500" HeightRequest="40">
+                            </Entry>
+                        </Frame>
+
+                        <Label Text="Date Last Seen" TextColor="Black" WidthRequest="150" FontSize="18" FontAttributes="Bold" Margin="10,0,120,0"/>
+                        <Frame WidthRequest="310" HeightRequest="42" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                            <effects1:BorderlessDatePicker x:Name="selectedDate"  FontSize="16" MaximumDate="{x:Static sys:DateTime.Now}"/>
+                        </Frame>
+
+                        <Label  Text="Time Last Seen" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,0,0,0"/>
+                        <Frame WidthRequest="310" HeightRequest="42" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                            <TimePicker x:Name="TimeLastSeen"  Margin="0,5,0,0" FontSize="16"></TimePicker>
+                        </Frame>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Brand" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,0,0,0"/>
+                            <Label Text="Color" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="110,0,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="0,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <Entry x:Name="Brand" FontSize="16" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40"  Margin="5,0,0,0" Placeholder="Brand (Optional)" Unfocused="Brand_Unfocused">
+
+                                </Entry>
+                            </Frame>
+
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="2,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <Entry x:Name="Color" FontSize="16" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40"  Margin="5,0,0,0" Placeholder="Color (Optional)" Unfocused="Color_Unfocused">
+
+                                </Entry>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Material" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,10,0,0"/>
+                            <Label Text="Quantity" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="90,10,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="0,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <Entry x:Name="Material" FontSize="16" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40"  Margin="5,0,0,0" Placeholder="Material (Optional)" Unfocused="Material_Unfocused" >
+
+                                </Entry>
+                            </Frame>
+
+                            <Frame WidthRequest="155" HorizontalOptions="Center" HeightRequest="40"  Margin="0,0,0,0" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                                <Entry x:Name="Quantity" FontSize="16" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40"  Margin="5,0,0,0" Placeholder="Quantity (Optional)" Unfocused="Quantity_Unfocused" >
+
+                                </Entry>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout x:Name="pickedImage" IsVisible="False">
+                            <Button x:Name="viewImage" TextColor="White" BackgroundColor="#00604f" FontSize="14" FontAttributes="Bold" Margin="10,5,0,0" WidthRequest="250" Clicked="viewImage_Clicked" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="removeImage" Text="X" TextColor="Black" FontSize="14" BackgroundColor="White" FontAttributes="Bold" Margin="0,-54,10,0" WidthRequest="50" Clicked="removeImage_Clicked" HorizontalOptions="End"/>
+                        </StackLayout>
+
+                        <Label Text="Upload Photo (Optional)" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,5,0,0"/>
+                        <Label  Text="(We recommend that you upload a photo as a proof, so that we can better understand the situation.)" TextColor="DarkSlateGray" FontSize="16" Margin="10,-5,0,0"/>
+                        <Button Text="Add image" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="300" FontSize="16"  CornerRadius="10" BackgroundColor="LightGray" BorderColor="Black"
+                    TextTransform="None" TextColor="Black" Margin="0,5,0,0" Clicked="Button_Popup"/>
+
+                        <Button Text="SUBMIT" HorizontalOptions="Center" WidthRequest="300" FontSize="18" CornerRadius="10" BackgroundColor="#00604f" 
+                        TextTransform="None" TextColor="White" Margin="0,20,0,30" Clicked="Submit_Clicked"/>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="REPORT.ReportPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+
+                <ImageButton Source="rphome" HeightRequest="50" HorizontalOptions="Start" Margin="20,40,0,0"  Clicked="Button_Home" BackgroundColor="Transparent"/>
+                <Image Source="rpbg1" HeightRequest="12" HorizontalOptions="Center" Margin="5,-35,0,0"/>
+                <Image Source="callemer" HeightRequest="50" HorizontalOptions="Center" Margin="250,-40,0,0" 
+                   xct:TouchEffect.LongPressCommand="{Binding TouchCommand}" xct:TouchEffect.LongPressDuration="1500"/>
+                <Image Source="rpbg" HeightRequest="180" HorizontalOptions="Center" Margin="0,-10,0,-20"/>
+
+                <StackLayout Margin="0, 20">
+                    <ImageButton Source="cwc" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_CWC"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,-10">
+                    <ImageButton Source="iv" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_IV"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,20">
+                    <ImageButton Source="laf" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_LAF"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,-10">
+                    <ImageButton Source="nc" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_NC"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,20">
+                    <ImageButton Source="pp" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_PP"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,-10">
+                    <ImageButton Source="po" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_PO"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,20">
+                    <ImageButton Source="spe" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_SPE"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,-10">
+                    <ImageButton Source="us" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_US"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,20">
+                    <ImageButton Source="wi" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="115" WidthRequest="315" BorderColor="#409b94" BorderWidth="3"  Clicked="Button_WI"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

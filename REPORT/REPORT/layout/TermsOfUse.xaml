@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:local="clr-namespace:REPORT"
+             Size="300, 470"
+             x:Class="REPORT.TermsOfUse">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="White">
+
+            <StackLayout>
+                <Frame HeightRequest="300" BackgroundColor="Transparent" Padding="-20" Margin="0,-50" BorderColor="Transparent">
+                    <StackLayout>
+                        <Image Source="PPBG" HeightRequest="200" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Terms and Conditions" HorizontalOptions="Center" FontSize="22" TextColor="White" FontAttributes="Bold" Margin="0,-150,0,0"/>
+                <Label Text="Last modified: January 19, 2022" HorizontalOptions="Center" FontSize="12" TextColor="White" Margin="0,-5,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Terms and Conditions of Use" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,20,0,0"/>
+                <local:CustomLabel Text="This is ReportIT's Terms and Conditions of Use and this is a contract between you and the group of people who's behind the project. We, as a team is giving you every right to have transparency before you use the application. Taking a few moments to read these Terms and Conditions of Use before using the application will be highly appreciated because once you had an access or even a view on the application, you will now be bound to these Terms." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="1. Rules" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Before accessing the application, you will need to register for an account. In order to create an Account, you must:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="1.	Should be a resident of Town and Country Subdivision." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="2.	Only one account per household can be registered." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="3.	Be at least 16 years of age." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="4.	Be legally permitted to use the App by the laws of your home country." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="You can create an Account via account registration only by providing all of the basic information that the system needs." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="The application is a very useful tool for everyone but if you feel that the application might not be relevant to you anymore, you can easily delete your account any time by going to the profile settings page. Your account will be deleted immediately but it may take a little while for some of your profile details to be completely removed from the App. Your profile information will be treated in accordance with our Privacy Policy." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We use a combination of automated systems and a team of moderators to monitor and review accounts and messages for content that indicates breaches of these Terms. We reserve the right at our sole discretion to terminate or suspend any account, restrict access to the app, or make use of any operational, technological, legal or other means available to enforce the Terms (including without limitation blocking specific IP addresses), at any time without liability and without the need to give you prior notice." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="2. Types of Report" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="There are 2 types of report that can be made using the application:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="1. Emergency Report (Through call)" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" FontAttributes="Bold" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="Emergency Reports are reports that needs an IMMEDIATE response. Mostly, this type of report involves a life-or-death situation such as fire, robbery, kidnapping, etc. Therefore, the Homeowners Association will be on standby in case there will be an emergency report. With that being said, we are strictly implementing that the use of this feature will only be for emergency purposes ONLY. Otherwise, sanctions may be applied." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="35,0,0,0"/>
+                <local:CustomLabel Text="2. Incident Report (Through forms)" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" FontAttributes="Bold" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="Submitting an incident report is categorized depending on the type of problem. This is done in order to keep the data organized and to help the authorities track the trend of the problems in order to provide long-term solutions for the incidents. The incident report includes: Lost and found, Neighborhood concerns, Power and Water interruption, etc." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="35,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="3. Privacy" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="For information about how the team collects, uses, and shares your personal data, please check out our Privacy Policy. By using ReportIT, you acknowledge that we may use such data in accordance with our Privacy Policy." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="4. Notification and other features" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="We may provide you with text messages, push notifications, alerts and other messages related to the app and/or the reports that has been submitted that may be relevant to you." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="5. Disclaimer" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="THE APP AND THE WEBSITE ARE ALL PROVIDED TO YOU 'AS IS' AND 'AS AVAILABLE' WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT." 
+                           HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="SHOULD APPLICABLE LAW NOT PERMIT THE FOREGOING EXCLUSION OF EXPRESS OR IMPLIED WARRANTIES, THEN WE GRANT THE MINIMUM EXPRESS OR IMPLIED WARRANTY REQUIRED BY APPLICABLE LAW. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, SHALL CREATE ANY WARRANTY, REPRESENTATION OR GUARANTEE NOT EXPRESSLY STATED IN THIS SECTION." 
+                           HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="ADDITIONALLY, WE DO NOT MAKE ANY WARRANTIES THAT THE APP OR SITE WILL BE UNINTERRUPTED, SECURE OR ERROR FREE OR THAT YOUR USE OF THE APP OR SITE WILL MEET YOUR EXPECTATIONS, OR THAT THE APP, AND THE WEBSITE OR ANY PORTION THEREOF, IS CORRECT, ACCURATE, OR RELIABLE. YOUR USE OF THE APP OR SITE IS AT YOUR OWN RISK. YOU ARE SOLELY RESPONSIBLE FOR YOUR USE." 
+                           HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="6. Limitation of Liability" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="NEITHER US NOR ANY OWNER WILL BE LIABLE FOR ANY DAMAGES, DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE, INCLUDING, WITHOUT LIMITATION, LOSS OF DATA, INCOME, PROFIT OR GOODWILL, LOSS OF OR DAMAGE TO PROPERTY AND CLAIMS OF THIRD PARTIES ARISING OUT OF YOUR ACCESS TO OR USE OF THE APP. HOWEVER CAUSED, WHETHER BASED ON BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE), PROPRIETARY RIGHTS INFRINGEMENT, PRODUCT LIABILITY OR OTHERWISE." 
+                               HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="THE FOREGOING SHALL APPLY EVEN IF WE WERE ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IF YOU BECOME DISSATISFIED IN ANY WAY WITH THE APP OR SITE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO STOP YOUR USE OF THE APP AND SITE." 
+                               HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="YOU HEREBY WAIVE ANY AND ALL CLAIMS ARISING OUT OF YOUR USE OF THE APP OR SITE. BECAUSE SOME STATES DO NOT ALLOW THE DISCLAIMER OF IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN TYPES OF DAMAGES, THESE PROVISIONS MAY NOT APPLY TO YOU. IF ANY PORTION OF THIS LIMITATION ON LIABILITY IS FOUND TO BE INVALID OR UNENFORCEABLE FOR ANY REASON, THEN OUR AGGREGATE LIABILITY SHALL NOT EXCEED ONE HUNDRED DOLLARS ($100)." 
+                               HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="THE LIMITATION OF LIABILITY HEREIN IS A FUNDAMENTAL ELEMENT OF THE BASIS OF THE BARGAIN AND REFLECTS A FAIR ALLOCATION OF RISK. THE APP AND SITE WOULD NOT BE PROVIDED WITHOUT SUCH LIMITATIONS AND YOU AGREE THAT THE LIMITATIONS AND EXCLUSIONS OF LIABILITY, DISCLAIMERS AND EXCLUSIVE REMEDIES SPECIFIED HEREIN WILL SURVIVE EVEN IF FOUND TO HAVE FAILED IN THEIR ESSENTIAL PURPOSE. THE FOREGOING DOES NOT APPLY TO LIABILITY ARISING FROM ANY FRAUD OR FRAUDULENT MISREPRESENTATIONS, OR ANY OTHER LIABILITY THAT CANNOT BE LIMITED BY APPLICABLE LAW." 
+                               HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="7. Indemnity" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="All the actions you make and information you submit remain your responsibility. Therefore, you agree to indemnify, defend, release, and hold us, and our partners, licensors, affiliates, contractors, officers, directors, employees, representatives, and agents, harmless, from and against any third-party claims, damages (actual and/or consequential), actions, proceedings, demands, losses, liabilities, costs and expenses (including reasonable legal fees) suffered or reasonably incurred by us arising as a result of, or in connection with:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="1. any negligent acts, omissions or willful misconduct by you;" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="2. your access to and use of the app;" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="3. uploading or submission of reports to the app by you;" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="4. any breach of these terms by you; and/or" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="5. your violation of any law or of any rights of any third party." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We retain the exclusive right to settle, compromise and pay any and all claims or causes of action which are brought against us without your prior consent. If we ask, you will co-operate fully and reasonably as required by us in the defense of any relevant claim." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="The foregoing provision does not require you to indemnify ReportIT team for any unconscionable commercial practice or any fraud, deception, false promise, misrepresentation or concealment, suppression, or omission of any material fact in connection with the app." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="8. Termination" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="These Terms commence on the date you accept them (as described in the preamble) and continue until terminated in accordance with the terms herein." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="If you want to terminate these Terms, you may do so by (a) notifying ReportIT team at any time, and (b) closing your account. Your notice should be sent to ReportIT team's address. " 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We may terminate or suspend these Terms, including your account, if you breach these Terms or if the team is required to do so by applicable law. You agree that all terminations for cause shall be made in ReportIT team's sole discretion and that we are not liable to you or any third party for any termination of your account." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="In the event that ReportIT team determines, in its sole discretion, that you have breached any portion of these Terms, or have otherwise demonstrated conducted inappropriate for the app, we reserve the right to: (a) warn you via email (to any email addresses you have provided to ReportIT) that you have violated the Terms; (b) discontinue your account; (c) notify and/or send your submitted reports to and/or fully cooperate with the proper law enforcement authorities for further action; and/or (f) pursue to any other action which ReportIT team deems to be appropriate." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="Termination of these Terms or your account includes the removal of access to your account, and all related information and content associated with or inside your account." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="All provisions of these Terms, which by their nature should survive, shall survive termination of these Terms, including, without limitation, the Arbitration Agreement, ownership provisions, warranty disclaimers and limitation of liability." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="9. Miscellaneous" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="These Terms, which we may amend from time to time, constitute the entire agreement between you and the team. The Terms supersede all previous agreements, representations, and arrangements between us (written or oral), excluding the Privacy Policy. Nothing in this clause shall limit or exclude any liability for fraudulent misrepresentation." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We have taken reasonable steps to ensure the currency, availability, correctness, and completeness of the information contained on ReportIT and provides that information on an 'as is', 'as available' basis. We do not give or make any warranty or representation of any kind about the information contained on ReportIT, whether express or implied. Use of ReportIT and the materials available on it is at your sole risk. We are not responsible for any loss arising from the transmission, use of data, or inaccurate Member Content." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="You are responsible for taking all necessary precautions to ensure that any material you may obtain from ReportIT is free of viruses or other harmful components. You accept that ReportIT will not be provided uninterrupted or error free, that defects may not be corrected or that The ReportIT team, or the server that makes it available, are free of viruses or bugs, spyware, Trojan horse or any similar malicious software. The team is not responsible for any damage to your computer hardware, computer software, or other equipment or technology including, but without limitation damage from any security breach or from any virus, bugs, tampering, fraud, error, omission, interruption, defect, delay in operation or transmission, computer line or network failure or any other technical or other malfunction." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="10. Modifications" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="As ReportIT continue to thrive, we might have to make changes to these Terms so we reserve the right to modify, amend or change the Terms at any time (a 'Change'). If we do this then the Changes will be posted on this page and we will indicate the Effective Date of the updates at the bottom of the Terms. In certain circumstances, we may send an email to you notifying you of a Change. It's also possible that we might ask you to agree to our Changes, but we'll let you know. You should regularly check this page for notice of any Changes – we want our users to be as informed as possible." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="Your continued use of ReportIT following any Change constitutes your acceptance of the Change and you will be legally bound by the new updated Terms. If you do not accept any Changes to the Terms, you should stop using ReportIT immediately." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</xct:Popup>

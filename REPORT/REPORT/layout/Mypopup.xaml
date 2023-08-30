@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300, 170"
+             x:Class="REPORT.Mypopup">
+
+    <StackLayout>
+        <Label Text="Add image" HorizontalOptions="Start" FontSize="20" TextColor="#00604f" FontAttributes="Bold" Margin="15,15,0,20"/>
+        <Button Text="Take a photo" HorizontalOptions="Start" Font="18" FontSize="18" BackgroundColor="Transparent" TextColor="Black" TextTransform="None" Clicked="Button_TakePicture"/>
+
+
+        
+        <Button Text="Upload from gallery" HorizontalOptions="Start" FontSize="18" BackgroundColor="Transparent" TextColor="Black" TextTransform="None" Clicked="Button_Upload"/>
+        <Image x:Name="pickedImage" HeightRequest="120" Background="AliceBlue"/>
+
+    </StackLayout> 
+</xct:Popup>

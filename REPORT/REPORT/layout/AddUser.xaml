@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:effects1="clr-namespace:REPORT.Effects"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="REPORT.AddUser">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="100" BackgroundColor="#00604f" Padding="0" Margin="0,0,0,-50" BorderColor="Transparent">
+                    <StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame BackgroundColor="White" Padding="0" BorderColor="Transparent" CornerRadius="25" Margin="0,0,0,-120" HeightRequest="650">
+                    <StackLayout Margin="-225,20,0,-10">
+                        <Label Text="TACDesk" TextColor="#00604f" HorizontalOptions="CenterAndExpand" FontSize="24" FontAttributes="Bold" Margin="20,0,0,0"/>
+                        <Label Text="Add your own account" TextColor="#3d3935" FontSize="16" Margin="252,-5,0,0"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label  Text="First Name" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="252,10,0,0"/>
+                            <Label  Text="Last Name" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="75,10,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame WidthRequest="150" HeightRequest="35" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Gray" Margin="250,0,0,0">
+                                <Entry x:Name="FirstName" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="0, -10,0,-10" ReturnType="Next">
+                                    <Entry.Effects>
+                                        <effects1:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+
+                            <Frame WidthRequest="150" HeightRequest="35" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Gray" Margin="5,0,0,0">
+                                <Entry x:Name="LastName" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="0,-10,0,-10" ReturnType="Next">
+                                    <Entry.Effects>
+                                        <effects1:PlainEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,100">
+                            <Button x:Name="Create" Text="Create" TextColor="White" Margin="230,10,0,0" BackgroundColor="#0eb482" WidthRequest="150" FontAttributes="Bold" FontSize="18"  
+                        HorizontalOptions="Center" HeightRequest="40" CornerRadius="10" Padding="5" Clicked="createAccount_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Frame HeightRequest="50" BackgroundColor="Transparent" Padding="-20" Margin="0,-50" BorderColor="Transparent">
+                <StackLayout>
+                    <Image Source="BG" HeightRequest="200" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,-40,0,0"/>
+                </StackLayout>
+            </Frame>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

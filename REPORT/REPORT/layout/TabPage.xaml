@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            NavigationPage.HasNavigationBar="False"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:local="clr-namespace:REPORT" xmlns:local1="clr-namespace:ReportIT" xmlns:local2="http://xamarin.com/schemas/2014/forms"
+            x:Class="REPORT.TabPage"
+            
+            BarBackgroundColor="Black"
+            SelectedTabColor="#0eb482"
+            UnselectedTabColor="White"
+            BarTextColor="White"
+            >
+    <local:HomePage Title="Home" IconImageSource="home" />
+    <local1:SearchPage Title="Search" IconImageSource="magnifier"/>
+    <local:ReportPage Title="Report" IconImageSource="forms"/>
+    <local:Profile Title="Profile" IconImageSource="user"/>
+    
+</TabbedPage>

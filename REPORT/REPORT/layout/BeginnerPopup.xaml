@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" xmlns:local="clr-namespace:REPORT"
+             Size="300, 470"
+             x:Class="REPORT.BeginnerPopup">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout BackgroundColor="White">
+
+            <StackLayout>
+                <Frame HeightRequest="300" BackgroundColor="Transparent" Padding="-20" Margin="0,-50" BorderColor="Transparent">
+                    <StackLayout>
+                        <Image Source="PPBG" HeightRequest="200" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="BEGINNER'S GUIDE" HorizontalOptions="Center" FontSize="22" TextColor="White" FontAttributes="Bold" Margin="0,-150,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <local:CustomLabel Text="Welcome to TACDesk's report page. This is where you submit all your concerns through call or through filling out forms."
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,20,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Emergency Call" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Emergency Call button is used to alert the Homeowners Association Office in case of incidents that need IMMEDIATE response. Incidents under this category includes robbery, accidents, fire, or anything that is a case of life-and-death scenario. To activate the call, just hold the call button for 3 seconds.."
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="Note: Using this feature inappropriately might cause you charges and violations."
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Padding="15">
+                <Label Text="Incident Form" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Incident form provides you a list of categories of the common reported problems. You can freely choose where your problem falls into. Just answer the provided questions in order for the Homeowners Association Office to evaluate and investigate the submitted report."
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                
+            </StackLayout>
+            
+
+            
+        </StackLayout>
+    </ScrollView>
+</xct:Popup> 

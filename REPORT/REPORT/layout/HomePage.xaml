@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:effects1="clr-namespace:REPORT.Effects"
+             x:Class="REPORT.HomePage"
+             NavigationPage.HasNavigationBar="False">
+
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout>
+                <Image Source="tacdesklogo" HeightRequest="230" HorizontalOptions="Center" Margin="-5,-50,0,-90"/>
+
+                <StackLayout>
+                    <Frame WidthRequest="305" HeightRequest="60" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="#00604f" Margin="0,0,0,0">
+                        <SearchBar x:Name="searchBar" TextChanged="searchBar_TextChanged" SearchButtonPressed="searchBar_SearchButtonPressed" Placeholder="Search" WidthRequest="30" HeightRequest="40" FontSize="18" Margin="5,0,0,0"></SearchBar>
+                    </Frame>
+                </StackLayout>
+
+                <Label Text="Home" FontSize="26" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" Margin="30,0,0,0"/>
+                <ContentView x:Name="loadingPopup" IsVisible="False">
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                        <StackLayout Orientation="Vertical" WidthRequest="200">
+                            <ActivityIndicator x:Name="loading" Margin="0,100,0,0" VerticalOptions="Center" HorizontalOptions="Center" Color="Black" IsRunning="True" WidthRequest="30" HeightRequest="30"/>
+
+                        </StackLayout>
+                    </StackLayout>
+                </ContentView>
+                <StackLayout>
+                    
+                    <ListView x:Name="ReportView" ItemsSource="{Binding Reports}" HasUnevenRows="True" ItemTapped="ReportView_ItemTapped" SeparatorVisibility="None" VerticalScrollBarVisibility="Never" IsPullToRefreshEnabled="True" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame HorizontalOptions="Center" WidthRequest="300" VerticalOptions="Start" HeightRequest="150" Margin="0,5,0,0">
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout HeightRequest="120" WidthRequest="140" VerticalOptions="Start">
+                                                    <Image Source="{Binding Image, FallbackValue='photoNA.png' ,TargetNullValue='photoNA.png'}" HeightRequest="150" WidthRequest="120"/>
+                                                </StackLayout>
+
+                                                <StackLayout HeightRequest="120">
+                                                    <Label x:Name="reportType" Text="{Binding reportType}" FontSize="18" FontAttributes="Bold" TextColor="Black" Margin="5,0,0,0"/>
+                                                    <Label Text= "{Binding reportID, StringFormat='Report ID: {0:F0}'}" FontSize="14" TextColor="Black" Margin="5,0,0,0"/>
+                                                    <Label x:Name="userID"  Text="{Binding userID, StringFormat='User ID: {0:F0}'}" FontSize="14" TextColor="Black" Margin="5,0,0,0"/>
+
+                                                    <Label Text="SHOW MORE" HorizontalOptions="Center" WidthRequest="120" HeightRequest="40" FontSize="16" BackgroundColor="Transparent" 
+                                                TextTransform="None" TextColor="#00604f" FontAttributes="Bold" Margin="0,10,0,0"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                </StackLayout>
+
+
+
+
+            </StackLayout>
+           
+        </Grid>
+       
+    </ContentPage.Content>
+
+</ContentPage>

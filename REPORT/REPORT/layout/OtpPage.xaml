@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:REPORT.CustomRenderer"
+             x:Class="REPORT.OtpPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout BackgroundColor="White">
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+            <StackLayout Margin="0,150,0,0">
+                <Frame BackgroundColor="White" BorderColor="Transparent" CornerRadius="0" HeightRequest="500" Padding="0" Margin="0">
+
+                    <StackLayout>
+
+                        <Image Source="verify" WidthRequest="20" HeightRequest="80" Margin="0,-60,0,0"/>
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" Margin="30,0,30,0">
+                            <Label Text="Enter your OTP" TextColor="#00604f" FontSize="35.5" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label Text="Type the code sent to your mobile number." TextColor="Black" FontSize="14" HorizontalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,40,0,0">
+                            <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
+                                <Frame x:Name="box1" BackgroundColor="White" BorderColor="Gray" WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10" >
+                                    <local:EntryCustomRenderer x:Name="value1" Focused="Entry_Focused_1" Unfocused="box1_Unfocused" Text="" Placeholder="0" Keyboard="Numeric" HorizontalOptions="CenterAndExpand" FontSize="Large"  TextColor="Black" MaxLength="1"  ReturnType="Next"/>
+                                </Frame>
+
+                                <Frame x:Name="box2" BackgroundColor="White" BorderColor="Gray"  WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10">
+                                    <local:EntryCustomRenderer x:Name="value2" Focused="Entry_Focused_2" Unfocused="box1_Unfocused" Text="" Placeholder="0"  Keyboard="Numeric"  HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" MaxLength="1" ReturnType="Next"/>
+                                </Frame>
+
+                                <Frame x:Name="box3" BackgroundColor="White" BorderColor="Gray"  WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10">
+                                    <local:EntryCustomRenderer x:Name="value3" Focused="Entry_Focused_3" Unfocused="box1_Unfocused" Text=""  Placeholder="0" Keyboard="Numeric" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" MaxLength="1"  ReturnType="Next"/>
+                                </Frame>
+
+                                <Frame x:Name="box4" BackgroundColor="White" BorderColor="Gray" WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10">
+                                    <local:EntryCustomRenderer x:Name="value4" Focused="Entry_Focused_4" Unfocused="box1_Unfocused" Text="" Placeholder="0"  Keyboard="Numeric" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" MaxLength="1"  ReturnType="Next"/>
+                                </Frame>
+
+                                <Frame x:Name="box5" BackgroundColor="White" BorderColor="Gray"  WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10">
+                                    <local:EntryCustomRenderer x:Name="value5" Focused="Entry_Focused_5" Unfocused="box1_Unfocused" Text="" Placeholder="0"  Keyboard="Numeric" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" MaxLength="1" ReturnType="Next"/>
+                                </Frame>
+
+                                <Frame x:Name="box6" BackgroundColor="White" BorderColor="Gray"  WidthRequest="50" VerticalOptions="Fill" Padding="0" Margin="0" CornerRadius="10">
+                                    <local:EntryCustomRenderer x:Name="value6" Focused="Entry_Focused_6" Text="" Unfocused="box1_Unfocused" Placeholder="0" Keyboard="Numeric" HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="Black" MaxLength="1"/>
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,100,0,0" Orientation="Horizontal" HorizontalOptions="Center">
+                                <Label Text="Did not received an OTP?" TextColor="#3d3935" FontSize="13"/>
+                                <Button Text="Resend code" HorizontalOptions="Center" BackgroundColor="Transparent" TextTransform="None" FontSize="13" 
+                                    TextColor="#0eb482" Margin="-15,-15" Clicked="resendOTP_Clicked"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,20,0,0">
+                                <Button Text="Verify" BackgroundColor="#00604f" TextColor="White" CornerRadius="40" HorizontalOptions="Center" WidthRequest="200" Clicked="Submit_Clicked">
+
+                                </Button>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

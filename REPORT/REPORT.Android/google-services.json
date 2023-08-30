@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "463324498936",
+    "project_id": "reportit-6bf64",
+    "storage_bucket": "reportit-6bf64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463324498936:android:63055d309f2b9dd1b5a40d",
+        "android_client_info": {
+          "package_name": "com.aytiwampor.report"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463324498936-78n4fidphhg5bkn5il80b91c4vlmio09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAToNbnxwlq_EuS3HzipyJmV2QDjVCykzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463324498936-78n4fidphhg5bkn5il80b91c4vlmio09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

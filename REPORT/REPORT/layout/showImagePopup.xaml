@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="350, 300"
+             x:Class="REPORT.showImagePopup"> 
+
+    <StackLayout>
+        <StackLayout>
+            <Image x:Name="viewImage" HeightRequest="200" WidthRequest="400" Aspect="AspectFill" Margin="10,10,10,10"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Go Back" TextColor="White" Margin="10,10,10,10" WidthRequest="150" BackgroundColor="#0eb482"  FontAttributes="Bold" FontSize="16"  
+                         CornerRadius="10" Clicked="goBack_Clicked"/>
+        </StackLayout>
+        
+    </StackLayout>
+</xct:Popup> 

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:local="clr-namespace:REPORT"
+             Size="300, 470"
+             x:Class="REPORT.PrivacyPolicy">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="White">
+
+            <StackLayout>
+                <Frame HeightRequest="300" BackgroundColor="Transparent" Padding="-20" Margin="0,-50" BorderColor="Transparent">
+                    <StackLayout>
+                        <Image Source="PPBG" HeightRequest="200" HorizontalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Privacy and Policy" HorizontalOptions="Center" FontSize="22" TextColor="White" FontAttributes="Bold" Margin="0,-150,0,0"/>
+                <Label Text="Last modified: January 19, 2022" HorizontalOptions="Center" FontSize="12" TextColor="White" Margin="0,-5,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Our commitment" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,20,0,0"/>
+                <local:CustomLabel Text="Here at ReportIT, your privacy is our top priority. Aside from providing you a better community
+                       by reinforcing peace and security to our community against crimes and incidents, your data privacy is at the heart of the creation of our system. Rest assured that we are here to take care of your information so that you know that you can fully trust and rely to your community leaders." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We highly appreciate the trust that you put on us when you provide us with your information so we take this seriously." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Privacy Commitment" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,-20,0,0"/>
+                <local:CustomLabel Text="Our design of the system was conducted with your privacy in mind. We are always ready to contact with experts from different fields specifically legal, security. design, and others to support and guide us in making the right decisions with the utmost respect for your privacy." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <Label Text="Transparency Commitment" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="We take commitment in providing you all of the information that you need for your own legal rights without having to put any underlying suspicious information that is not known by the users. Furthermore, any updates in the application/website and to our data privacy policy will immediately be available to read by any licensed users." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <Label Text="Security Commitment" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="We have a team devoted to keeping your information safe and secure. We constantly update and maintain our security policies and invest in our security efforts for the safety of your data.." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Privacy Policy" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Welcome to ReportIT Privacy Policy. This explains how we collect, store, protect, and share your information. We suggest you read this in conjunction with our Terms and Conditions of Use." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="Whilst you're using our digital service, we collect some information about you. Your provided information will be sent to and used by the Homeowners Association as a guide in making our community a better place. This Policy explains how we protect your personal data, so please read very carefully." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Who we are" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="The application is operated by the Town and Country Dasmariñas Homeowners Association (also referred to in this policy as 'we' or 'us'), which is also the controller of personal information collected and processed through the application." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="The Town and Country Dasmariñas Homeowners Association can be reached by emailing townandcountryhoaph1@gmail.com or by post at the following address: Congressional Rd, Dasmariñas, Cavite 4114, Philippines." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="1. Collection of Information" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Registration Information" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,-20,0,0"/>
+                <local:CustomLabel Text="When you download the app and create an account, we may collect certain information about you, such as Name, Mobile number, Address, and Date of birth." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="Once you register, you will be able to review and change this information by logging in (other than your address). It is your responsibility to ensure that your account details are kept up to date." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="The information we collect helps to enhance the app and verify our users since only one account per household is allowed. Meaning, if the provided address is already registered, you won't be able to create a new account using that address." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Report Submission" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,-20,0,0"/>
+                <local:CustomLabel Text="The information you provide when you submit reports on the report tab will be sent directly to our database where we store all the report information provided by the users. To help the authorities understand every situation better, you have to indicate information as accurately as possible when filling out the forms provided." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="2. Use of your Information" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Our main goal is to ensure your experience on reporting incidents is easy. In order to deliver this to you, we may use your registration and report submission information to:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="• offer you our services and features;" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="• contact you with information about the app (e.g. updates and new features);" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="• resolve disputes and address submitted concerns properly;" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="• investigate fraud, protect our legal rights, and to enforce our Terms and Conditions."
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="Moderation Practices" HorizontalOptions="Start" FontSize="13" TextColor="Black" 
+                       FontAttributes="Bold" Margin="15,-20,0,0"/>
+                <local:CustomLabel Text="We use a combination of automated systems and a team of moderators to monitor and review accounts and report submissions (including photos and any other information provided) for content that indicates breaches of our Terms and Conditions of Use. If an account meets certain criteria that demonstrate that the Terms and Conditions of Use are likely to have been breached, the relevant account will be subject to a warning and the user's access restricted and/or blocked." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="If you post anything that is inconsistent with our Terms and Conditions of Use, we reserve the right to terminate or restrict access to your account." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="3. Disclosure Information" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Our policy is to not disclose your personal data, except the report submissions that will be posted on the app's homepage. However, the admin will still filter the reports to be posted and be seen by the general users." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="4. Our policy towards age and number of users" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Although we want as many people as possible to enjoy our creation, you have to be at least 18 years old to use the app. In addition, only one account can be registered per address/household." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="We do not knowingly collect any information about children, minors or anyone under the age of 18. If you are less than 18 years old, we request that you do not submit information to us. If we become aware that a child, minor or anyone under the age of 18 has registered with us and provided us with personal information, we will take steps to terminate that person's registration." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="5. Security" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="We pride ourselves on taking all appropriate security measures to help protect your information against loss, misuse and unauthorized access. We use reasonable security measures to safeguard the confidentiality of your personal information such as secured servers using firewalls." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="Unfortunately, no website or Internet transmission is ever completely 100% secure and even we cannot guarantee that unauthorized access, hacking, data loss or other breaches will never occur, but here are some handy tips to help keep your data secure:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="1.	Please make sure you log out of your account after use as you never know who may stumble onto your account." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="2.	Please don't share the password you use to access your account with anyone else." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="3.	Change your password periodically." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="If you ever think someone has had access to your password or account, please let us know. We cannot guarantee the security of your personal data while it is being transmitted to our site and any transmission is at your own risk." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="6. Your rights" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="Privacy laws applicable in your country may give you the following rights:" 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+                <local:CustomLabel Text="1.	Right to be informed: what personal data an organization is processing and why (we provide this information to you in this Privacy Policy)." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="2. Right of access: you can request a copy of your data." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="3.	Right of rectification: if the data held is inaccurate, you have the right to have it corrected." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="4.	Right to erasure: you have the right to have your data deleted in certain circumstances." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="5.	Right to restrict processing: in limited circumstances, you have the right to request that processing is stopped but the data retained." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="6.	Right to data portability: you can request a copy of certain data in a machine-readable form that can be transferred to another provider." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="7.	Right to object: in certain circumstances (including where data is processed on the basis of legitimate interests or for the purposes of marketing) you may object to that processing." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+                <local:CustomLabel Text="8.	Rights related to automated decision-making including profiling: there are several rights in this area where processing carried out on a solely automated basis results in a decision which has legal or significant effects for the individual. In these circumstances your rights include the right to ensure that there is human intervention in the decision-making process." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="15,0,0,0"/>
+            </StackLayout>
+
+            <StackLayout Padding="15">
+                <Label Text="7.	Changes to this policy" HorizontalOptions="Start" FontSize="16" TextColor="Black" FontAttributes="Bold" Margin="0,-20,0,0"/>
+                <local:CustomLabel Text="As we evolve, we may revise this Privacy Policy from time to time. The most current version of the policy will govern our use of your information and will always be in the app. If we make a change to this policy that, in our sole discretion, is material, we will notify you, for example, via an email to the email associated with your account." 
+                       HorizontalOptions="Start" FontSize="13" TextColor="Black" Margin="0,0,0,0"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</xct:Popup>

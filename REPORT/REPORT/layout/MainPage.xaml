@@ -1,0 +1,58 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="REPORT.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Image Source="SAMPLE2" WidthRequest="1000" HeightRequest="800" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Image Source="tacdesklogo" WidthRequest="20" HeightRequest="100" Margin="0,-380,0,0"/>
+
+            <BoxView>
+                <BoxView.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                        <GradientStop Color="Transparent" Offset="0.25"/>
+                        <GradientStop Color="#00604f" Offset="0.9"/>
+                        <GradientStop Color="#00604f" Offset="1"/>
+                    </LinearGradientBrush>
+                </BoxView.Background>
+            </BoxView>
+
+            <StackLayout Margin="22,390,0,0">
+                <Label Text="Town and Country Dasmarinas Help Desk" FontSize="22" TextColor="White" FontAttributes="Bold"/>
+                <Label Text="Submit concerns and reports to the Homeowners Association Office in just few minutes." FontSize="16" TextColor="White" Margin="0,0,0,0"/>
+            </StackLayout>
+
+
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,60,0,0">
+                    <CheckBox x:Name="Agree" Color="White" Margin="15,476,0,0" IsChecked="False" ScaleX="0.9" ScaleY="0.9"/>
+                    <Label Text="By checking the box, you agree to our" TextColor="White" FontSize="16" Margin="-8,480,0,0"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Button Text="Terms of Service" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" TextTransform="None" FontSize="16" 
+                        TextColor="White" Margin="33,-25,0,0" FontAttributes="Bold" Clicked="Button_Popup1"/>
+                    <Label Text="and" TextColor="White" FontSize="16" Margin="173,-41,0,0"/>
+                    <Button Text="Privacy Policy" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" TextTransform="None" FontSize="16" 
+                        TextColor="White" Margin="193,-40,0,0" FontAttributes="Bold" Clicked="Button_Popup"/>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Login" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="35" Padding="5" 
+                        WidthRequest="155" FontSize="18" CornerRadius="10" BackgroundColor="White" TextTransform="None" 
+                        TextColor="#00604f" FontAttributes="Bold" Margin="0,0,0,0" Clicked="Button_Login"/>
+                    <Button Text="Register" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="35" Padding="5" 
+                        WidthRequest="155" FontSize="18" CornerRadius="10" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" TextTransform="None" 
+                        TextColor="White" FontAttributes="Bold" Margin="0,0,0,0" Clicked="Button_Register"/>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:reportit="clr-namespace:REPORT"
+             xmlns:effects11="clr-namespace:ReportIT.effects" xmlns:effects12="clr-namespace:REPORT.Effects"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="REPORT.IllegalVendors">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+
+                <Frame HeightRequest="200" BackgroundColor="#00604f">
+                    <StackLayout Margin="0,-10,0,0">
+                        <ImageButton Source="back" BackgroundColor="Transparent" HeightRequest="50" HorizontalOptions="Start" 
+                                 Margin="5,30,0,0" Clicked="Button_Back">
+                        </ImageButton>
+
+                        <StackLayout BackgroundColor="transparent" HorizontalOptions="Center" Orientation="Horizontal"  
+                                 WidthRequest="370" HeightRequest="120" Margin="0,10">
+                            <Label Text="Illegal Vendors" TextColor="White" FontSize="30" FontAttributes="Bold" Margin="10,0,0,-10"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="25" Margin="0,-50,0,0">
+                    <StackLayout>
+
+                        <Label Text="What is the person selling?" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,10,0,0"/>
+                        <Frame WidthRequest="315" HeightRequest="40" Margin="-10,0,0,0" HorizontalOptions="Center" CornerRadius='10' 
+                               Padding="0" BorderColor="Transparent" BackgroundColor="White">
+                            <reportit:BorderlessPicker x:Name="Product"
+                                                   Title="Select item"
+                                                   VerticalOptions="Center" Margin="10,0,0,0"
+                                                   FontSize="16"  SelectedIndexChanged="Product_SelectedIndexChanged">
+                                <Picker.Items>
+                                </Picker.Items>
+                            </reportit:BorderlessPicker>
+                        </Frame>
+
+                        <Entry x:Name="Others" FontSize="16" Margin="5,-1,0,0" Placeholder="If others, please specify here." WidthRequest="500" HeightRequest="40" IsVisible="false" IsEnabled="False"/>
+
+
+
+                        <Label  Text="How often do you see them selling?" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,10,0,0"/>
+                        <Frame WidthRequest="310" HeightRequest="40" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent" Margin="-5,0,0,0">
+                            <Entry x:Name="Occurence" FontSize="16" Margin="5,-1,0,0" Placeholder="E.g. Daily, Weekly, Monthly" WidthRequest="500" HeightRequest="40">
+                            </Entry>
+                        </Frame>
+
+
+                        <Label Text="If you know the person, please state their name and location. If not, kindly describe their appearance." TextColor="Black" FontSize="18" 
+                           FontAttributes="Bold" Margin="10,5,0,0"/>
+                        <Frame WidthRequest="310" HeightRequest="40" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent" Margin="-5,0,0,0">
+                            <Entry x:Name="Description" FontSize="16" Margin="5,-1,0,0" Placeholder="E.g. Tall, brown, and short-haired" WidthRequest="500" HeightRequest="40">
+                            </Entry>
+                        </Frame>
+
+
+                        <Label Text="Date of the incident" TextColor="Black" WidthRequest="150" FontSize="18" FontAttributes="Bold" Margin="10,10,120,-10"/>
+                        <Frame WidthRequest="310" HeightRequest="42" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent" Margin="0,-15">
+                            <effects11:BorderlessDatePicker FontSize="16" x:Name="dateOfIncident" MaximumDate="{x:Static sys:DateTime.Now}"/>
+                        </Frame>
+
+                        <Label  Text="Time of the incident" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,20,0,-5"/>
+                        <Frame WidthRequest="310" HeightRequest="42" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Transparent">
+                            <TimePicker Margin="0,0,0,0" FontSize="16" x:Name="timeOfIncident"></TimePicker>
+                        </Frame>
+
+                        <Label Text="Upload Photo (Optional)" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,5,0,0"/>
+                        <Label  Text="(We recommend that you upload a photo as a proof, so that we can better understand the situation.)" TextColor="DarkSlateGray" FontSize="16" Margin="10,-5,0,0"/>
+                        <Button Text="Add image" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="300" FontSize="16"  CornerRadius="10" BackgroundColor="LightGray" BorderColor="Black"
+                    TextTransform="None" TextColor="Black" Margin="0,5,0,0" Clicked="Button_Popup"/>
+
+                        <StackLayout x:Name="pickedImage" IsVisible="False">
+                            <Button x:Name="viewImage" TextColor="White" BackgroundColor="#00604f" FontSize="14" FontAttributes="Bold" Margin="10,5,0,0" WidthRequest="250" Clicked="viewImage_Clicked" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="removeImage" Text="X" TextColor="Black" FontSize="14" BackgroundColor="White" FontAttributes="Bold" Margin="0,-54,10,0" WidthRequest="50" Clicked="removeImage_Clicked" HorizontalOptions="End"/>
+                        </StackLayout>
+
+
+                        <Label  Text="Additional information" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="10,5,0,0"/>
+                        <Frame WidthRequest="300" HeightRequest="100" HorizontalOptions="Center" CornerRadius='10' Padding="0" BorderColor="Gray">
+                            <Editor x:Name="Additional" Margin="5,0,0,-10" FontSize="16" Placeholder="Any more we need to know?" WidthRequest="500" HeightRequest="40" Unfocused="Additional_Unfocused">
+                                <Editor.Effects>
+                                    <effects12:PlainEntry/>
+                                </Editor.Effects>
+                            </Editor>
+                        </Frame>
+
+                        <Label  Text="Note: Some reports may not be posted on the home page for it may contain sensitive or inappropriate information." TextColor="DarkSlateGray" FontSize="14" Margin="10,5,0,0"/>
+
+                        <Button Text="SUBMIT" HorizontalOptions="Center" WidthRequest="300" FontSize="18"  CornerRadius="10" BackgroundColor="#00604f" 
+                    TextTransform="None" TextColor="White" Margin="0,20,0,30" Clicked="Submit_Clicked"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    
+
+</ContentPage>

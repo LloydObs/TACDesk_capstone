@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:effects1="clr-namespace:REPORT.Effects"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="REPORT.EditProfile">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout>
+
+            <StackLayout>
+                <Label Text="Edit Profile" TextColor="#00604f" HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" Margin="0,30,0,0"/>
+                <Label Text="Edit your profile information" TextColor="#3d3935" HorizontalOptions="Center" FontSize="14" Margin="0,-5,0,0"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="First Name" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Frame WidthRequest="300" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="firstName" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10, 0,-10" Placeholder="First Name">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Last Name" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Frame WidthRequest="300" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="lastName" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10, 0,-10" Placeholder="Last Name">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Phone Number" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Frame WidthRequest="300" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="phoneNumber" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10, 0,-10" Placeholder="Phone Number" IsReadOnly="True">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label  Text="Block No." TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Label  Text="Lot No." TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="80,10,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame WidthRequest="145" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="block" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10,0,-10" Placeholder="Block No." IsReadOnly="True">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+
+                <Frame WidthRequest="145" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="5,0,0,0">
+                    <Entry x:Name="lot" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10,0,-10" Placeholder="Lot No." IsReadOnly="True">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Street" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Frame WidthRequest="300" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="street" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10, 0,-10" Placeholder="Street Name" IsReadOnly="True">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label  Text="Password" TextColor="#3d3935" FontSize="16" FontAttributes="Bold"
+                        Margin="44,10,0,0"/>
+                <Frame WidthRequest="300" HeightRequest="35" HorizontalOptions="Start" CornerRadius='30' Padding="0" BorderColor="Gray" Margin="30,0,0,0">
+                    <Entry x:Name="password" WidthRequest="30" HeightRequest="30" FontSize="16" Margin="10,-10, 0,-10" Placeholder="Password" IsPassword="True" IsReadOnly="True">
+                        <Entry.Effects>
+                            <effects1:PlainEntry/>
+                        </Entry.Effects>
+                    </Entry>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="0,15,0,0">
+                <Button x:Name="save" Text="Save" TextColor="White" Margin="0,0,0,0" BackgroundColor="#00604f" WidthRequest="300" FontAttributes="Bold" FontSize="18"  
+                        HorizontalOptions="Center" HeightRequest="40" CornerRadius="30" Padding="5" Clicked="save_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </Grid>
+   
+</ContentPage>

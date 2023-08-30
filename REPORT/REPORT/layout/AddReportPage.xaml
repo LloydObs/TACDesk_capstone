@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:REPORT.ViewModels" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="REPORT.AddReportPage"
+            
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout>
+
+            <Label Text="What type of incident do you want to report?" TextColor="Black" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,50,0,0"/>
+
+            <StackLayout Margin="0, 20">
+                <ImageButton Source="DSP" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="DSP_Clicked"/>
+               
+
+            </StackLayout>
+
+            <StackLayout Margin="0,-10">
+                <ImageButton Source="LFI" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="LAF_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,20">
+                <ImageButton Source="NC" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="NC_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,-10">
+                <ImageButton Source="PO" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="PO_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,20">
+                <ImageButton Source="WI" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="WI_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Margin="0,-10,0,60">
+                <ImageButton Source="OTHERS" HorizontalOptions="Center" VerticalOptions="Center"  CornerRadius="10"
+                             HeightRequest="100" WidthRequest="300" BorderColor="#409b94" BorderWidth="3"  Clicked="OTHERS_Clicked"/>
+            </StackLayout>
+
+            <ImageButton Source="newlogo"
+                         >
+                
+            </ImageButton>
+                
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

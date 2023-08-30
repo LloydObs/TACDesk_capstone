@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="REPORT.ChooseUser">
+              
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout>
+                <Image Source="tacdesklogo" HeightRequest="230" HorizontalOptions="Center" Margin="-5,-50,0,-90"/>
+
+                <StackLayout>
+                    <Label Text="Who's Using?" FontSize="26" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" Margin="30,0,30,0"/>
+                </StackLayout>
+
+                <StackLayout HeightRequest="400">
+                    <ListView x:Name="UserList" ItemsSource="{Binding AccountList}" HasUnevenRows="True" ItemTapped="ReportView_ItemTapped" SeparatorVisibility="None" VerticalScrollBarVisibility="Never">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame HorizontalOptions="CenterAndExpand" WidthRequest="250" VerticalOptions="CenterAndExpand" HeightRequest="100" Margin="0,15,15,0" CornerRadius="10">
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Frame Padding="0" 
+                                                HeightRequest="75"
+                                                WidthRequest="75"
+                                                BackgroundColor="White"
+                                                CornerRadius="37.5"
+                                                BorderColor="Teal"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                IsClippedToBounds="True"
+                                                Margin="20,10,0,0">
+                                                    <Frame.Content>
+                                                        <Image Source="profilePic.png" HeightRequest="150" WidthRequest="120" Aspect="Fill" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                                                    </Frame.Content>
+
+                                                </Frame>
+                                                <Label FontSize="16" TextColor="Black" Margin="20,40,0,0">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text= "{Binding Firstname}"/>
+                                                            <Span Text=" "/>
+                                                            <Span Text="{Binding Lastname}"/>
+
+
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
+                                            </StackLayout>
+
+
+                                        </StackLayout>
+
+                                    </Frame>
+
+
+                                </ViewCell>
+
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <ListView.Footer>
+                            <Button x:Name="addProfileButton" Text="Add User" TextColor="White" Margin="10,20,10,0" BackgroundColor="#0eb482" WidthRequest="120" FontAttributes="Bold" FontSize="18"  
+                                HorizontalOptions="Center" HeightRequest="40" CornerRadius="10" Padding="5" Clicked="ImageButton_Clicked"/>
+                        </ListView.Footer>
+
+                    </ListView>
+
+                </StackLayout>
+
+
+
+
+            </StackLayout>
+        </Grid>
+       
+        
+    </ContentPage.Content>
+</ContentPage>
