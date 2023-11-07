@@ -27,11 +27,11 @@ To run this project locally, follow these steps:
 2. Check for any updates from the packages
 3. Install any emulator that can handle Android Api Level 31
 4. Run the application
-### Note: API key is not available for use for testers but can be provided an guest account through contacting the developers. 
+### Note: API key is not available for use for testers but can be provided a guest account through contacting the developers. 
 
 ## Usage
 
-To use My Awesome App, follow these steps:
+To use TacDesk, follow these steps:
 
 1. Create an account.
 2. Log in.
